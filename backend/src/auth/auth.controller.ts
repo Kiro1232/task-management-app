@@ -59,7 +59,9 @@ export class AuthController {
   @ApiBearerAuth()
   @ApiOkResponse({ description: 'Logged out successfully' })
   logout(@Res({ passthrough: true }) res: Response) {
-    res.clearCookie('access_token', { httpOnly: true, sameSite: 'strict', path: '/' });
+    const isProduction = this.configService.get('NODE_ENV') === 'production';
+    const sameSite: 'lax' | 'strict' | 'none' = isProduction ? 'none' : 'lax';
+    res.clearCookie('access_token', { httpOnly: true, secure: isProduction, sameSite, path: '/' });
     return { message: 'Logged out successfully' };
   }
 
@@ -83,10 +85,14 @@ export class AuthController {
    */
   private setAuthCookie(res: Response, token: string): void {
     const isProduction = this.configService.get('NODE_ENV') === 'production';
+    // For cross-site requests (frontend deployed on a different origin), browsers
+    // require SameSite='none' and Secure=true. In development (same-origin or
+    // localhost) we keep a more permissive 'lax' value.
+    const sameSite: 'lax' | 'strict' | 'none' = isProduction ? 'none' : 'lax';
     res.cookie('access_token', token, {
       httpOnly: true,
       secure: isProduction,
-      sameSite: isProduction ? 'strict' : 'lax',
+      sameSite,
       maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
       path: '/',
     });

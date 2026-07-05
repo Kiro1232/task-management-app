@@ -3,6 +3,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ThrottlerModule, ThrottlerGuard } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
+import { AppController } from './app.controller';
 import { AuthModule } from './auth/auth.module';
 import { TasksModule } from './tasks/tasks.module';
 import { UsersModule } from './users/users.module';
@@ -36,6 +37,7 @@ import { UsersModule } from './users/users.module';
     TasksModule,
     UsersModule,
   ],
+  controllers: [AppController],
   providers: [
     // Apply throttle guard globally to all routes
     {

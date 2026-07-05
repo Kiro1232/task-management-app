@@ -68,7 +68,7 @@ export function TaskForm({ task, onSubmit, onCancel }: TaskFormProps) {
         label="Title *"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        placeholder="What needs to be done?"
+        placeholder="Add task Details..."
         error={errors.title}
         maxLength={200}
         autoFocus
@@ -80,7 +80,7 @@ export function TaskForm({ task, onSubmit, onCancel }: TaskFormProps) {
         <textarea
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          placeholder="Add more details (optional)..."
+          placeholder="Add description details (optional)..."
           rows={3}
           maxLength={1000}
           className={[

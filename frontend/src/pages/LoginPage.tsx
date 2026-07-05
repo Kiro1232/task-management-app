@@ -45,23 +45,23 @@ export function LoginPage() {
               Task Manager
             </p>
             <h1 className="mt-4 max-w-lg text-4xl font-semibold leading-tight text-white">
-              A cleaner way to plan work, move faster, and stay organized.
+              Organize your tasks and stay on top of your daily work.
             </h1>
-            <p className="mt-4 max-w-md text-sm leading-6 text-slate-300">
-              Keep everything in one place with secure sign-in, instant task updates, and a calm
-              interface designed for real work.
+            <p className="mt-4 mb-2 max-w-md text-sm leading-6 text-slate-300">
+              Manage your daily tasks, track progress, and keep everything organized with a simple
+              and intuitive task management application.
             </p>
           </div>
 
           <div className="grid gap-3 text-sm text-slate-200">
             <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur">
-              Secure auth with HTTP-only cookies and rate limiting.
+              Secure login to keep your account and tasks protected.
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur">
-              Teal, responsive UI tuned for desktop and mobile.
+              Create, edit, and manage your tasks with ease.
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur">
-              Fast task management with clear status filtering.
+              Easily track the status of your work.
             </div>
           </div>
         </aside>

@@ -214,19 +214,25 @@ export function DashboardPage() {
 
               <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
                 <div className="rounded-2xl border border-teal-100 bg-teal-50/70 px-4 py-3">
-                  <p className="text-xs uppercase tracking-[0.2em] text-teal-600">Pending</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-600">
+                    Pending
+                  </p>
                   <p className="mt-1 text-2xl font-semibold text-teal-800">
                     {pagination.statusCounts?.pending ?? 0}
                   </p>
                 </div>
                 <div className="rounded-2xl border border-cyan-100 bg-cyan-50/70 px-4 py-3">
-                  <p className="text-xs uppercase tracking-[0.2em] text-cyan-600">In Progress</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-600">
+                    In Progress
+                  </p>
                   <p className="mt-1 text-2xl font-semibold text-cyan-800">
                     {pagination.statusCounts?.in_progress ?? 0}
                   </p>
                 </div>
                 <div className="rounded-2xl border border-emerald-100 bg-emerald-50/70 px-4 py-3">
-                  <p className="text-xs uppercase tracking-[0.2em] text-emerald-600">Completed</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-600">
+                    Completed
+                  </p>
                   <p className="mt-1 text-2xl font-semibold text-emerald-800">
                     {pagination.statusCounts?.completed ?? 0}
                   </p>
@@ -342,7 +348,7 @@ export function DashboardPage() {
       <TaskDetailsModal
         isOpen={!!viewingTask}
         task={viewingTask}
-        title={collectionView === 'deleted' ? 'Deleted task details' : 'Task details'}
+        title={collectionView === 'deleted' ? 'Deleted Task Details' : 'Task Details'}
         onClose={() => setViewingTask(null)}
       />
 

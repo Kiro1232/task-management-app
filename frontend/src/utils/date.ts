@@ -1,9 +1,9 @@
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 export function formatDateDDMMMYYYY(value?: string | Date | null): string {
-  if (!value) return 'Not set';
+  if (!value) return '--';
   const date = value instanceof Date ? value : new Date(value);
-  if (Number.isNaN(date.getTime())) return 'Not set';
+  if (Number.isNaN(date.getTime())) return '--';
 
   const day = String(date.getUTCDate()).padStart(2, '0');
   const month = MONTHS[date.getUTCMonth()];

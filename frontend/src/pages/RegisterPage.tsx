@@ -131,23 +131,23 @@ export function RegisterPage() {
               Get started
             </p>
             <h2 className="mt-4 max-w-lg text-4xl font-semibold leading-tight text-white">
-              Set up your workspace in seconds.
+              Everything you need to stay organized.
             </h2>
             <p className="mt-4 max-w-md text-sm leading-6 text-slate-300">
-              Create your account, secure it with JWT cookies, and manage a polished task list from
-              any device.
+              Create tasks, organize your work, and keep track of your progress with a simple and
+              easy-to-use workspace.
             </p>
           </div>
 
           <div className="grid gap-3 text-sm text-slate-200">
             <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur">
-              Clean onboarding with clear validation.
+              Secure account registration and login.
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur">
-              Optimized for desktop, tablet, and mobile screens.
+              Easily create, edit, and organize your tasks.
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur">
-              Premium teal visuals that feel modern and focused.
+              Track your progress with clear task statuses.
             </div>
           </div>
         </aside>
